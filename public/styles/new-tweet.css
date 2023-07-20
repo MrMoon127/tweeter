@@ -1,0 +1,39 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#tweet-text {
+  border: none;
+  border-bottom: solid;
+  outline: none;
+  background-color: #f4f1ec;
+  resize: none;
+  height: 40px;
+}
+
+#form-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #4056A1;
+  font-family: Bungee;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  margin-top: 1em;
+}
+
+.counter {
+  font-family: Bungee;
+  margin-top: 1em;
+  font-size: 1.5em;
+}
