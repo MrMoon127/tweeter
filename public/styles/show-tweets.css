@@ -1,0 +1,54 @@
+
+
+article {
+  border: 5px solid;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+article:hover {
+  box-shadow: 10px 5px #4057a150;
+}
+
+.tweet-header {
+  padding: 1em;
+  margin-right: 1em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.handle {
+  color: #4057a150;
+  font-weight: bold;
+}
+
+.tweet-p {
+  margin-left: 1em;
+  padding: 1em;
+  font-weight: bold;
+}
+
+.tweet-footer {
+  padding: 0.5em;
+  margin: 1em;
+  border-top: solid;
+  font-size: 0.75em;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  color:#4056A1;
+  width: 4em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
+  color: rgb(255, 200, 0);
+}
