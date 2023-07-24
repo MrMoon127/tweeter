@@ -50,7 +50,7 @@ const loadTweets = function() {
   $.getJSON("/tweets", function(data) {
     renderTweets(data);
   });
-}
+};
 
 document.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -62,12 +62,13 @@ document.addEventListener('submit', (event) => {
   if ($text === "" || $text === null) {
     alert("your message is empty!!!");
   } else if ($text.length > 140) {
-    alert("your message is too long, please be more concise")
+    alert("your message is too long, please be more concise");
   } else {
     $data = $textarea.serialize();
-    $.post("/tweets", $data)
 
-    loadTweets();
+    // this clears the box after a tweet is submit
+    $("#tweet-text").val('');
+    $.post("/tweets", $data).done(() => loadTweets());
   }
 
 });
