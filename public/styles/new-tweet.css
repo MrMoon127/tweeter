@@ -41,3 +41,11 @@ form {
 .fontRed {
   color: red;
 }
+
+#alerts {
+  display: none;
+  color: red;
+  border: solid;
+  margin: 10px 0px;
+  padding: 10px 10px 10px 20px;
+}
