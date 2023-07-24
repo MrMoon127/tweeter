@@ -5,9 +5,12 @@
  */
 
 const renderTweets = function(tweets) {
+  
+  $("#tweets-container").empty();
+
   for (const tweet of tweets) {
     const $tweetElement = createTweetElement(tweet);
-    $("#tweets-container").append($tweetElement);
+    $("#tweets-container").prepend($tweetElement);
   }
 };
 
@@ -54,6 +57,17 @@ document.addEventListener('submit', (event) => {
 
   $textarea = $("#tweet-text");
 
-  $data = $textarea.serialize();
-  $.post("/tweets", $data)
+  $text = $textarea.val().trim();
+
+  if ($text === "" || $text === null) {
+    alert("your message is empty!!!");
+  } else if ($text.length > 140) {
+    alert("your message is too long, please be more concise")
+  } else {
+    $data = $textarea.serialize();
+    $.post("/tweets", $data)
+
+    loadTweets();
+  }
+
 });

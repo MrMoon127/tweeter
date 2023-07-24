@@ -21,10 +21,10 @@ article:hover {
 
 .profile {
   display: flex;
-  width: 6.5em;
+  width: 10em;
 
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .handle {
