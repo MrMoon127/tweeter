@@ -19,6 +19,14 @@ article:hover {
   justify-content: space-between;
 }
 
+.profile {
+  display: flex;
+  width: 6.5em;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
 .handle {
   color: #4057a150;
   font-weight: bold;

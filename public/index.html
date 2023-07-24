@@ -20,10 +20,11 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -56,7 +57,7 @@
           <textarea name="text" id="tweet-text"></textarea>
 
           <div id="form-counter">
-            <button class="btn" type="submit">Tweet</button>
+            <button id="submit-btn" class="btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
 
@@ -64,27 +65,12 @@
 
       </section>
 
-      <section id="tweets">
-        <article>
-          <header class="tweet-header">
-            Newton
-            <div class="handle">
-              @SirIsaac
-            </div>
-          </header>
-          <p class="tweet-p">
-            If I have seen further it is by standing on the shoulders of giants
-          </p>
-          <footer class="tweet-footer">
-            10 days ago
-            <div class="icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article>
+      <!-- This section contains individual tweets -->
+      <section id="tweets-container">
       </section>
     </main>
+    <script>
+      loadTweets();
+    </script>
   </body>
 </html>
