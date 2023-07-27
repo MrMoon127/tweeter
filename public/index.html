@@ -37,43 +37,44 @@
       </div>
     </nav>
 
-    <header id="profile">
-      <div class="avatar">
+    <div id="below-navBar">
+      <header id="profile">
+        <div class="avatar">
           <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
+        </div>
+        <div>
           <h2>MrMoon</h2>
-      </div>
-    </header>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          
+          <form Content-Type="application/x-www-form-urlencoded" method="post" action="/tweets">
+            <label for="tweet-text" class="label">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            
+            <!-- This is where the error messages will show-->
+            <p id="alerts"></p>
+            
+            <div id="form-counter">
+              <button id="submit-btn" class="btn" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
 
-        <form Content-Type="application/x-www-form-urlencoded" method="post" action="/tweets">
-          <label for="tweet-text" class="label">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+          </form>
 
-          <!-- This is where the error messages will show-->
-          <p id="alerts"></p>
+        </section>
 
-          <div id="form-counter">
-            <button id="submit-btn" class="btn" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-
-        </form>
-
-      </section>
-
-      <!-- This section contains individual tweets -->
-      <section id="tweets-container">
-      </section>
-    </main>
-    <script>
+        <!-- This section contains individual tweets -->
+        <section id="tweets-container">
+        </section>
+      </main>
+      <script>
       loadTweets();
-    </script>
+      </script>
+    </div>
   </body>
 </html>

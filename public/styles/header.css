@@ -1,5 +1,5 @@
 #profile {
-  height: 520px;
+  height: 400px;
   width: 100%;
   background-color: #e0d500;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
@@ -8,4 +8,25 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+}
+
+.avatar {
+  align-self: center;
+  justify-self: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  #profile {
+    width: 50%;
+    margin: 5em 2em 15em 2em;
+
+    display: flex;
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #profile {
+    margin-top: 4em;
+  }
 }
